@@ -6,7 +6,7 @@ This project is licensed under the GPL v3 license and is intended for educationa
 
 ## Instructions
 
-A report PDF will guide you on how to use this project.
+The `projectConstruct.md` will guide you on how to use this project.
 
 ## License
 
