@@ -10,7 +10,7 @@ A report PDF will guide you on how to use this project.
 
 ## License
 
-This project is licensed under the [GPL v3 license](https://www.gnu.org/licenses/gpl-3.0.html).
+This project is licensed under the [GPL v3 license](LICENSE).
 
 ## Project Summary
 
