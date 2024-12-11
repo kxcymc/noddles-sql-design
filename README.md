@@ -10,7 +10,7 @@
 
 ## 协议
 
-本项目使用 [GPL v3 协议](./LICENSE.txt)。
+本项目使用 [GPL v3 协议](LICENSE)。
 
 ## 项目总结
 
