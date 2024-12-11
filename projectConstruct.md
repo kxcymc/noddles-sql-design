@@ -28,7 +28,7 @@ This project uses MySQL database and is integrated with a Node.js backend. Below
    After logging in as the `test001` user, execute the entire `settings.sql` file.
 
 3. **Configure `.env` File**  
-   Create a `.env` file in the root directory of the project and add the following content:
+   Create a `.env` file in the directory of '页面' and add the following content:
 
    ```
    DB_HOST=localhost
