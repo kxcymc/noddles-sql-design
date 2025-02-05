@@ -1,0 +1,130 @@
+body {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    background-color: rgba(174, 162, 162, 0.525);
+}
+
+/* alert column */
+.info-box {
+    width: fit-content;
+    margin: 0 auto;
+    top: 50px;
+    z-index: 2;
+}
+
+#loginModal,
+#registerModal {
+    position: relative;
+}
+
+.goBackToIntro {
+    position: absolute;
+    top: 2.5%;
+    right: 5%;
+}
+
+#loginModal .goBackToIntro {
+    top: 5%
+}
+
+.topBar {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    /* 它的display只能是flex */
+    display: flex;
+    width: 100%;
+    /* height: fit-content; */
+    height: 100px;
+    flex-grow: 0;
+}
+
+.waiterInfo {
+    margin-left: 50px;
+}
+
+.waiterLoginName {
+    display: block;
+    margin-top: 20px;
+    height: 22px;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.waiterLoginTel {
+    display: block;
+    margin-top: 15px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.ordinaryFuncBtns {
+    height: 100%;
+    width: 0;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.ordinaryFuncBtns button {
+    position: relative;
+    height: 50%;
+}
+
+/* orderpage normal button */
+.normalbtn {
+    padding: 6px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    background-color: rgba(169, 100, 100, 0.4);
+    color: white;
+    text-align: center;
+    margin: 17px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.normalbtn:hover {
+    background-color: rgba(165, 90, 80, 0.9);
+    border-color: rgba(0, 0, 0, 0.9);
+}
+
+.normalbtn:active {
+    background-color: rgb(140, 12, 5) !important;
+    border-color: rgb(20, 18, 20) !important;
+}
+
+
+.btnControlArea {
+    /* 它的display只能是block */
+    /* display: block; */
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative;
+}
+
+.contorlTips {
+    font-size: 1.8rem;
+    color: azure;
+}
+
+/* .bgcForFunc {
+    background: url('a_src/manage/assets/bgManage.jpg') no-repeat center center / cover;
+}
+
+.bgcForFunc::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(155, 155, 155, 0.);
+} */

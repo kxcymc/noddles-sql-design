@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>最方便的线上点菜服务 | 二进制面馆</title>
+</head>
+
+<body>
+  <!-- alert box -->
+  <div class="alert info-box">
+  </div>
+  <nav id="navbar">
+    <div id="logo">
+      <img alt="Myonlinemeal.com">
+    </div>
+    <ul>
+      <li class="item btn btn-primary"><a href="#home">回到顶部</a></li>
+      <li class="item btn btn-primary"><a href="#services-container">服务介绍</a></li>
+      <div class="navgrowdiv"></div>
+      <li class="item btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal"><a class="aneedtoprevent"
+          href="#">我要登录</a></li>
+      <li class="item btn btn-primary"><a href="../manage/index.html">后台页面</a></li>
+    </ul>
+    <div id="setaside">
+      <img alt="." class="myAvatar rounded-circle border border-primary">
+      <p class="username"></p>
+    </div>
+  </nav>
+
+  <div class="modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">不登录也能点餐，您需要登录吗？</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="Mytel" class="form-label"><span class="text-danger">*</span>手机号</label>
+            <input type="text" class="form-control" id="Mytel" placeholder="请输入11位手机号">
+          </div>
+          <div class="mb-3 imgmb-3">
+            <label for="userAvater" class="form-label">头像（如果您想要）</label>
+            <div id="imgdrop-area">
+              可拖放文件<br>
+              <label for="imgInput" style="cursor: pointer;">
+                <button class="btn btn-primary uploadAvatar">
+                  <i class="bi bi-plus"></i> 点击上传图片
+                </button>
+                <img class="addicon" alt="Upload Image" />
+                <img class="avatarPre" alt="Preview Avatar" src="" />
+              </label>
+              <input id="imgInput" type="file" name="image" accept="image/*" style="display:none;" />
+              <br><br><br><br><br><br><br>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary closebtn" data-bs-dismiss="modal">先开饭了</button>
+          <button type="button" class="btn btn-primary" id="confirmBtn" data-bs-dismiss="modal">我要登录</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="home">
+    <h1 class="h-primary">&nbsp;&nbsp;&nbsp;&nbsp;二进制面馆 欢迎您！</h1>
+    <p>为007的工科牛马们准备的面</p>
+    <p>面品多样，调料丰富，浓郁高汤，价格实惠</p>
+    <a href="../order/index.html"><button type="button" class="btn btn-primary">&nbsp;&nbsp;现在就点吧！</button></a>
+  </section>
+  <hr>
+  <section id="services-container">
+    <h1 class="h-primary center">餐厅介绍</h1>
+    <div id="services">
+      <div class="box">
+        <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="Myonlinemeal.com">
+        <h2 class="h-secondary center">食品餐饮</h2>
+        <p>我们主打面食，面条力做劲道爽滑，种类多样，宽面、裤带面、细面、鸡蛋面、蔬菜面等。欢迎大家来到我们的门店享受原汁原味，我们的地址是：<br>中国重庆市北碚区天生街道天生路2号西南大学北碚校区李园小吃街<br>Food
+          Catering Street of Dormitory Li, Southwest University beibei campus, beibei district of Chongqing city, China
+        </p>
+      </div>
+      <div class="box">
+        <img src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="Myonlinemeal.com">
+        <h2 class="h-secondary center">批量订购</h2>
+        <p>本店支持批量购入原材料，公司餐和团餐。线上暂时无法订购，如有需要，请尊驾移步至店内购买，或致电 080-12345678 ，付款后可免费配送至您的指定地点（配送限北碚区内，50份起送）</p>
+      </div>
+      <div class="box">
+        <img
+          src="https://media.istockphoto.com/photos/delivery-man-riding-a-motorcycle-with-delivery-box-3d-rendering-picture-id1314333578?k=20&m=1314333578&s=612x612&w=0&h=bEK333Defwfr9D_tnjlD4UCGEJRqR1af4biwnMjQz_I="
+          alt="Myonlinemeal.com">
+        <h2 class="h-secondary center">点餐服务</h2>
+        <p>电子化的点单服务，方便快捷，物美价廉，包您满意！
+          您可以上滑页面，单击“现在就点吧！”按钮，进入我们的点菜界面。（不久后我们将提供外送服务，在结账界面选择外送即可）
+        </p>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <!-- <section id="client-section">
+    <h1 class="h-primary center">我们的赞助商</h1>
+    <div id="clients">
+      <div class="client-item">
+        <img src="https://pnggrid.com/wp-content/uploads/2021/05/Swiggy-1003x1024.png" alt="赞助商">
+      </div>
+      <div class="client-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png" alt="赞助商">
+      </div>
+      <div class="client-item">
+        <img src="https://pnggrid.com/wp-content/uploads/2021/07/Just-Eat-Logo.png" alt="赞助商">
+      </div>
+      <div class="client-item">
+        <img
+          src="https://assets.website-files.com/5ee732bebd9839b494ff27cd/5ef0a132e152b7b29311f6c7_Dominos-Pizza-600x600.png"
+          alt="赞助商">
+      </div>
+      <div class="client-item">
+        <img src="https://cdn.branch.io/branch-assets/1655829866785-og_image.png" alt="赞助商">
+      </div>
+    </div>
+  </section> -->
+  <section id="contact">
+    <h1 class="h-primary center">Contact Us</h1>
+    <div id="contact-box">
+      <form action="">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email ID" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="phone" name="phone" id="phone" placeholder="Enter your phone number" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </div>
+        <div class="Sbtn">
+          <button class="btn center" onclick="submit()">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="center">
+      Copyright &copy; www.binaryNoodles.com. 保留一切权利。
+    </div>
+  </footer>
+</body>
+
+</html>

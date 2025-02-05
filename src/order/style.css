@@ -1,0 +1,602 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    background-color: rgba(126, 122, 122, 0.25);
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* orderpage normal button */
+.normalbtn {
+    /* padding: 6px 20px; */
+    border: 2px solid rgba(0, 255, 140, 0.4);
+    background-color: rgba(0, 140, 255, 0.4);
+    color: white;
+    text-align: center;
+    margin: 17px;
+    font-size: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.normalbtn:hover {
+    background-color: rgba(0, 140, 255, 0.9) !important;
+    border-color: rgba(0, 255, 140, 0.9) !important;
+}
+
+.normalbtn:active {
+    background-color: rgb(0, 140, 255) !important;
+    border-color: rgb(0, 255, 140) !important;
+}
+
+/* alert column */
+.info-box {
+    width: fit-content;
+    margin: 0 auto;
+    top: 50px;
+    z-index: 2;
+}
+
+/* Navigation Bar */
+#navbar {
+    top: 17.5%;
+    left: 0;
+    right: auto;
+    /* 更改导航栏位置的关键值就是 auto */
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 85px;
+    height: 65%;
+    opacity: 0.8;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.579);
+    transition: all 0.3s linear;
+}
+
+/* Navigatin Bar: Logo and Image */
+#logo {
+    flex-grow: 0;
+    display: block;
+    width: 80px;
+    height: 100px;
+    padding: 20px 0;
+    /* 适当增加间距 */
+    text-align: center;
+    /* 让Logo居中 */
+}
+
+#logo img {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
+/* Navigation Bar: List Styling */
+#navbar ul {
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    /* 列方向排列 */
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* 宽度占满整个导航栏 */
+}
+
+#navbar ul li {
+    list-style: none;
+    flex-grow: 0;
+    padding: 11px;
+    margin: 15px 0;
+    /* 设置每项之间的垂直间距 */
+}
+
+#navbar ul a {
+    display: inline;
+    text-decoration: none;
+}
+
+#setaside {
+    flex-grow: 1;
+    text-align: center;
+    padding: 20px 0;
+    padding-top: 0;
+    width: 85px;
+    height: 30px;
+}
+
+#setaside .myAvatar {
+    height: 70px;
+    width: 70px;
+    border-color: rgba(0, 0, 0, 0) !important;
+    border-radius: 50%;
+}
+
+#setaside .username {
+    font-size: 1.2rem;
+    word-wrap: break-word;
+    color: rgb(0, 140, 255);
+}
+
+.returnToPageBtn,
+.returnToPageBtn:hover {
+    color: black;
+}
+
+/* Home background */
+#home {
+    /* background: url('a_src/order/assets/bgMenu.jpg') no-repeat center center / cover; */
+    color: white;
+}
+
+#returnModal {
+    color: black;
+}
+
+/* Order Form */
+.stapleFood {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 50vh;
+    width: auto;
+    margin: 0 50px;
+}
+
+.dishes img {
+    height: 200px;
+    width: 200px;
+    border-radius: 70px;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+.dishes {
+    height: fit-content;
+    position: relative;
+    border: 0px solid black;
+    border-radius: 100px;
+    margin: 30px 50px;
+    padding: 30px;
+    box-shadow: 7px 7px 12px rgb(0, 120, 70);
+    /* -5px -5px -12px rgb(0, 120, 70); */
+}
+
+.dishes:hover {
+    box-shadow: -3px -3px 12px rgb(0, 255, 140),
+        3px 3px 12px rgb(0, 255, 140);
+}
+
+.dishes h2,
+p {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.toppings {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 40vh;
+    width: auto;
+    border: 0px solid black;
+    margin: 0px;
+}
+
+.appetizer img {
+    height: 100px;
+    width: 100px;
+    border: 0px solid red;
+    border-radius: 50px;
+    margin-left: -20px;
+    margin-top: -30px;
+    box-shadow: -5px -5px 12px rgb(0, 255, 140);
+}
+
+.appetizer {
+    height: fit-content;
+    position: relative;
+    font-size: 14px;
+    border: 0px solid black;
+    border-radius: 30px;
+    margin: 50px;
+    box-shadow: -5px -5px 12px rgb(0, 255, 140);
+
+}
+
+.appetizer h2 {
+    display: flex;
+    margin-left: 85px;
+    margin-top: -50px;
+    word-wrap: break-word;
+    /* max-width: 200px; */
+}
+
+.dishes .name,
+.appetizer .name {
+    color: black;
+    margin-right: 10px;
+    flex: 2;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+}
+
+.dishes .remain,
+.appetizer .remain{
+    color: black;
+}
+
+.dishes .name .tag {
+    display: block;
+    padding: 2px;
+}
+
+.dishes .price,
+.appetizer .price {
+    flex: 1;
+    font-size: 1.6rem;
+    color: rgb(223, 12, 12);
+    position: absolute;
+    right: 11%;
+}
+
+.dishes .spec {
+    flex: 2;
+}
+
+.dishes .count,
+.appetizer .count {
+
+    flex: 1;
+    color: rgb(0, 255, 140);
+    font-size: 1.6rem;
+}
+
+.btnandinput {
+    align-items: center;
+    margin: 0;
+}
+
+#btn-subtract {
+    height: 40px !important;
+    width: 40px !important;
+    padding: 0;
+    margin: 0;
+}
+
+#input-number {
+    width: 100px;
+    height: 31px;
+    text-align: center;
+}
+
+/* 隐藏默认的自增自减按钮 */
+#input-number::-webkit-outer-spin-button,
+#input-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    /* Chrome, Safari, Edge */
+    margin: 0;
+}
+
+/*  Firebox提供的这个属性不标准，但是可以使用 */
+/* #input-number[type=number] {
+    -moz-appearance: textfield; 
+} */
+#btn-add {
+    margin: 0;
+    height: 40px !important;
+    width: 40px !important;
+    padding: 0;
+}
+
+
+/* Check Order Form Section */
+
+#orderformSection {
+    /* background: url('a_src/order/assets/bgOrder.jpg') no-repeat center center / cover; */
+}
+
+.checkdiv {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.okOrderbtn {
+    text-align: center;
+    margin: 17px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+    border: 2px solid rgb(0, 200, 100);
+}
+
+.okOrderbtn:hover {
+    background-color: rgba(0, 200, 100, 0.9);
+    color: white !important;
+}
+
+.normalbtn {
+
+    border: 2px solid rgba(0, 255, 140, 0.4);
+    background-color: rgba(0, 140, 255, 0.4);
+    color: white;
+
+    font-size: 12px;
+}
+
+.clearOrderbtn {
+    text-align: center;
+    margin: 17px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid firebrick;
+}
+
+.clearOrderbtn:hover {
+    border-color: firebrick;
+    color: white;
+    background-color: rgb(255, 0, 0);
+}
+
+
+.list {
+    width: 80%;
+    margin: 0 auto;
+    /* padding-top: 68px; */
+}
+
+.item,
+.itemheader {
+    padding: 15px;
+    transition: all .5s;
+    display: flex;
+    border-top: 1px solid rgb(0, 140, 255);
+    transition: all 0.2s linear;
+}
+
+.item:nth-child(4n) {
+    margin-left: 0;
+}
+
+.item:hover {
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+
+.item img,
+.itemheader .headerpic {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.item .foodname,
+.itemheader .foodname {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #333;
+    flex: 2;
+}
+
+.item .foodname .foodtag {
+    display: block;
+    padding: 2px;
+    font-size: 12px;
+    color: #999;
+}
+
+.item .foodprice,
+.item .foodsub-total,
+.itemheader .foodprice,
+.itemheader .foodsub-total {
+    font-size: 18px;
+    color: firebrick;
+    flex: 1;
+}
+
+.item .foodprice::before,
+.item .foodsub-total::before,
+.totalfoodamount::before {
+    content: "¥";
+    font-size: 12px;
+}
+
+.item .foodspec {
+    flex: 2;
+    color: #888;
+    font-size: 14px;
+}
+
+.item .foodcount {
+    flex: 1;
+    color: black;
+}
+
+.total {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.8rem;
+    border-top: 2px solid firebrick;
+}
+
+.total .totalfoodamount {
+    color: firebrick;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+.placeOrderdiv {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+.placeOrderdiv .placeOrderBtn {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* 勿删！！！订单头部需要把以下样式覆盖 */
+.itemheader p,
+.itemheader div {
+    font-weight: bold;
+    color: black !important;
+    font-size: 18px;
+    height: fit-content !important;
+    margin: 0;
+}
+
+.itemheader .foodname {
+    text-indent: -55px;
+}
+
+.itemheader .foodprice {
+    text-indent: -100px;
+}
+
+.checkdiv,
+.list,
+.total,
+.placeOrderdiv {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Order Successfully Section */
+#Myorder {
+    height: fit-content;
+    width: 100%;
+    /* background: url('a_src/order/assets/bgShow.jpg') no-repeat center center / cover; */
+}
+
+
+/* 卡片容器布局 */
+.content {
+    padding: 30px;
+    width: 88%;
+    margin: 0 auto;
+}
+
+.card {
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    border: 1px solid #ebeef5;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.card:nth-child(n + 2) {
+    margin-top: 30px;
+}
+
+.card .title {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ebeef5;
+
+}
+
+.card .title span,
+.form-select,
+.form-check,
+.page-now {
+    font-weight: bolder;
+}
+
+.form-check,
+.form-select {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.form-select {
+    width: auto;
+}
+
+
+.MyorderBody .sel-form>div {
+    margin-top: 20px;
+}
+
+.sel-form .sel-btn {
+    font-size: 1.2rem;
+}
+
+.table img {
+    width: 100px;
+    height: 100px;
+}
+
+.table .bi {
+    cursor: pointer;
+}
+
+.page-now {
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+/* Guest Critic Section */
+.criticBGC {
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 30%, rgba(181, 182, 182, 0.73));
+    padding-bottom: 25px;
+    padding-top: 10px;
+    justify-content: center;
+}
+
+.criticContainer {
+    height: 95vh;
+    width: 80%;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.952) 50%, rgba(183, 183, 183, 0.689));
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: -5px -5px 12px rgb(66, 66, 66);
+}
+
+
+
+/* FOOTER PART  */
+.footer {
+    margin-top: 100px;
+    height: 150px;
+    background-color: rgb(169, 165, 165);
+}
+
+.copyrights h3 {
+    letter-spacing: 2px;
+    padding-left: 5%;
+    padding-top: 40px;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+.center {
+    text-align: center;
+}

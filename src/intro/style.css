@@ -1,0 +1,305 @@
+/* CSS reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variable */
+:root {
+    --navbar-height: 59px;
+}
+
+/* alert column */
+.info-box {
+    width: fit-content;
+    margin: 0 auto;      
+    top: 50px;
+    z-index: 2;
+}
+
+/* Navigation Bar  */
+#navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    height: 100px;
+    transition: all .3s;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+#navbar::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.579);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .4;
+
+}  
+
+/* Navigatin Bar: Logo and Image  */
+#logo {
+    display: inline-block;
+}
+
+#logo img {
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+    margin: 3px 10px;
+}
+
+
+/* Nvaigatin Bar: List Styling */
+#navbar ul {
+    display: flex;
+    margin: 30px;
+    width: 75%;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#navbar .navgrowdiv{
+    flex-grow: 1;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+    flex-grow: 0;
+    /* padding: 3px 22px; */
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+}
+
+#setaside {
+    height: 70px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#setaside .myAvatar {
+    height: 70px;
+    width: 70px;
+    max-width: 70px;
+    max-height: 70px;
+    border-color: rgba(0, 0, 0, 0) !important;
+}
+
+#setaside .username{
+    margin: 0;
+    text-align: left;
+    line-height: 14px;
+    height: 14px;
+}
+
+/* Home Section  */
+#home {
+    position: absolute;
+    top: 0;
+    background: url("https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_960_720.jpg") no-repeat center center/cover;
+    opacity: 0.85;
+    display: flex;
+    flex-direction: column;
+    padding: 0 200px;
+    width: 100%;
+    height: 674px;  
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#imgdrop-area{
+    position: relative;
+}
+
+.addicon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    /* display: none; */
+}
+
+.uploadAvatar {
+    position: absolute;
+    top: 160px;
+    left: 0;
+    margin: 0 !important;
+}
+
+.avatarPre {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 400px;
+    max-height: 300px;
+    height: 300px;
+    width: 300px;
+    display: none;
+}
+
+/* Services Section  */
+#services-container {
+    position: relative;
+    background: url("https://images.pexels.com/photos/1510714/pexels-photo-1510714.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") center center/cover;
+    margin-top: 640px;
+}
+
+#services {
+    margin: 0 34px;
+    padding-bottom: 34px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#services .box {
+    border: 2px solid brown;
+    width: calc(100%/3);
+    padding: 30px;
+    margin: 23px 6px;
+    border-radius: 23px;
+    background: rgb(224, 232, 235);
+}
+
+#services .box p {
+    text-indent: 33px;
+    text-align: justify;
+    line-height: 1.5;
+    margin: 0;
+}
+
+#services .box img {
+    width: 170px;
+    height: 130px;
+    display: block;
+    margin: auto;
+}
+
+/* Contact Section  */
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .6;
+    background: url("https://images.pexels.com/photos/193003/pexels-photo-193003.jpeg?auto=compress&cs=tinysrgb&w=600") center center/cover;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: .5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+}
+
+/* Footer  */
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+
+/* Utility Classes */
+hr {
+    margin: 0;
+}
+
+.h-primary {
+    color: white;
+    font-size: 2.8rem;
+    padding: 12px;
+    padding-top: 40px;
+}
+
+.h-secondary {
+    font-size: 1.8rem;
+    padding: 12px;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(169, 100, 100, 0.4);
+    color: white;
+    text-align: center;
+    margin: 17px;
+    font-size: 1.2rem;
+    /* border-radius: 15px; */
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgba(165, 90, 80, 0.9) ;
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+.btn:active {
+    background-color: rgb(140, 12, 5) !important;
+    border-color: rgb(224, 232, 235) !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.Sbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

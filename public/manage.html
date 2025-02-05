@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二进制面馆｜管理员页面</title>
+</head>
+
+<body>
+    <!-- alert box -->
+    <div class="alert info-box">
+    </div>
+
+    <!-- The modal to login -->
+    <div class="modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">请先登录</h5>
+                    <button class="btn btn-outline-dark btn-sm goBackToIntro">回到主界面</button>
+                </div>
+                <div class="modal-body loginModalBody">
+                    <!-- 表单控件必须有 name 属性，否则 form-serialize 无法收集-->
+                    <form action="" class="loginForm">
+                        <div class="mb-3 loginInput">
+                            <label for="Mytel" class="form-label"><span class="text-danger">*</span>手机号</label>
+                            <input type="text" class="form-control" id="Mytel" placeholder="请输入11位手机号" name="Mytel">
+                        </div>
+                        <div class="mb-3 loginInput">
+                            <label for="Password" class="form-label"><span class="text-danger">*</span>密码</label>
+                            <input type="password" class="form-control" id="Password" placeholder="请输入密码"
+                                name="Password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="  btn btn-primary wantRegisBtn" data-bs-target="#registerModal"
+                        data-bs-toggle="modal">注册</button>
+                    <button type="button" class=" btn btn-success loginBtn">登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The modal to register -->
+    <div class="modal" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">新服务员注册</h5>
+                    <button class="btn btn-outline-dark btn-sm goBackToIntro">回到主界面</button>
+                </div>
+                <div class="modal-body registerModalBody">
+                    <!-- 表单控件必须有 name 属性，否则 form-serialize 无法收集-->
+                    <form action="" class="registerForm">
+                        <div class="mb-3 regisInput">
+                            <label for="Waitername" class="form-label"><span class="text-danger">*</span>姓名</label>
+                            <input type="text" class="form-control" id="Waitername" placeholder="请输入姓名"
+                                name="Waitername">
+                        </div>
+                        <div class="mb-3 regisInput">
+                            <label for="Mytel" class="form-label"><span class="text-danger">*</span>手机号</label>
+                            <input type="text" class="form-control" id="Mytel" placeholder="请输入11位手机号" name="Mytel">
+                        </div>
+                        <div class="mb-3 regisInput">
+                            <label for="Password" class="form-label"><span class="text-danger">*</span>密码</label>
+                            <input type="password" class="form-control" id="Password" placeholder="请输入密码"
+                                name="Password">
+                        </div>
+                        <div class="mb-3 regisInput">
+                            <label for="correctPass" class="form-label"><span class="text-danger">*</span>确认密码</label>
+                            <input type="password" class="form-control" id="correctPass" placeholder="再次输入密码">
+                        </div>
+                        <div class="mb-3 regisInput">
+                            <label for="confirmCode" class="form-label"><span class="text-danger">*</span>验证码</label>
+                            <input type="text" class="form-control" id="confirmCode" placeholder="请向老板获取验证码"
+                                value="123456">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success registerBtn">提交</button>
+                    <button type="button" class="retrunToLoginBtn btn btn-primary" data-bs-target="#loginModal"
+                        data-bs-toggle="modal">返回</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The modal to change password -->
+    <div class="modal" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel"
+        aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">请修改您的密码</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body changePasswordModalBody">
+                    <!-- 表单控件必须有 name 属性，否则 form-serialize 无法收集-->
+                    <form action="" class="changePasswordForm">
+                        <div class="mb-3 changePasswordInput">
+                            <label for="Password" class="form-label"><span class="text-danger">*</span>新密码</label>
+                            <input type="password" class="form-control" id="Password" placeholder="请输入8～20位密码"
+                                name="Password">
+                        </div>
+                        <div class="mb-3 changePasswordInput">
+                            <label for="confirmPassword" class="form-label"><span
+                                    class="text-danger">*</span>确认新密码</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="请确认密码">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="  btn btn-primary" data-bs-dismiss="modal">关闭</button>
+                    <button type="button" class=" btn btn-success changePasswordBtn">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The modal to delete waiter -->
+    <div class="modal" id="deleteWaiterModal" tabindex="-1" aria-labelledby="deleteWaiterModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">请删除指定服务员的信息</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body deleteWaiterModalBody">
+                    <!-- 表单控件必须有 name 属性，否则 form-serialize 无法收集-->
+                    <form action="" class="deleteWaiterForm">
+                        <div class="mb-3 deleteWaiterInput">
+                            <label for="Mytel" class="form-label"><span class="text-danger">*</span>手机号</label>
+                            <input type="text" class="form-control" id="Mytel" placeholder="请输入11位手机号" name="Mytel">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="  btn btn-primary" data-bs-dismiss="modal">关闭</button>
+                    <button type="button" class=" btn btn-success deleteWaiterBtn">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The modal to change Status of one order -->
+    <div class="modal" id="changeOrderStatusModal" tabindex="-1" aria-labelledby="changeOrderStatusModalLabel"
+        aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">更改任一订单的状态</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body changeOrderStatusModalBody">
+                    <!-- 表单控件必须有 name 属性，否则 form-serialize 无法收集-->
+                    <form action="" class="changeOrderStatusForm">
+                        <div class="mb-3 changeOrderStatusInput">
+                            <label for="Orderid" class="form-label"><span class="text-danger">*</span>订单编号</label>
+                            <input type="text" class="form-control" id="Orderid" placeholder="请输入订单编号" name="Orderid">
+                        </div>
+                        <div class="mb-3 changeOrderStatusInput">
+                            <label for="Statusname" class="form-label"><span
+                                    class="text-danger">*</span>订单状态&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/已支付/正在制作/已完成/退款成功</label>
+                            <input type="text" class="form-control" id="Statusname" placeholder="输入新的订单状态"
+                                name="Statusname">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class=" btn btn-primary" data-bs-dismiss="modal">关闭</button>
+                    <button type="button" class=" btn btn-success changeOrderStatusBtn">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bgcForFunc">
+        <!-- Bar showing waiters'/admin's info -->
+        <div class="topBar">
+            <div class="waiterInfo">
+                <span class="waiterLoginName" data-limit-id="2"></span>
+                <span class="waiterLoginTel"></span>
+            </div>
+            <div class="ordinaryFuncBtns">
+                <button class="btn btn-primary btn-lg normalbtn goBackIntro">返回主页</button>
+                <button class="btn btn-primary btn-lg normalbtn goBackOrder">跳转菜单</button>
+                <button class="btn btn-primary btn-lg normalbtn wantChangePassword">修改密码</button>
+                <button class="btn btn-primary btn-lg normalbtn wantdeleteWaiter">离职办理</button>
+            </div>
+        </div>
+        <!-- operate Area -->
+        <div class="btnControlArea">
+            <p class="contorlTips">功能列表：</p>
+            <button class="btn btn-primary btn-lg  normalbtn wantchangeOrderStatus">修改订单状态</button>
+            <button class="btn btn-primary btn-lg  normalbtn">别点我</button>
+            <button class="btn btn-primary btn-lg  normalbtn">点我我也不弹窗</button>
+            <button class="btn btn-primary btn-lg  normalbtn">我在摆烂呢</button>
+            <span class="contorlTips"></span>
+        </div>
+    </div>
+</body>
+
+</html>
